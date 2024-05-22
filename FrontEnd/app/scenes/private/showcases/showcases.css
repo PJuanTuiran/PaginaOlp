@@ -66,11 +66,15 @@ img{
     height: 30%;
     background-color: transparent;
     color: var(--white-color);
-    font-size: ;
+    font-size: 30px ;
 }
 .button_tip{
     width: 10%;
     background-color: transparent;
+    color: white;
+    border: none;
+    font-weight: 900;
+    font-family: 20px;
    
 }
 .image{
@@ -125,6 +129,7 @@ button:hover{
     gap: 5px;
 }
 .flex_button{
+    height: 80%;
     margin-top: 50px;
     display: flex;
     justify-content: space-around;
