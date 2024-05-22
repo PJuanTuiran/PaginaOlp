@@ -5,7 +5,7 @@ import bulb from '../../../assets/iconos-menu/bulb.png'
 
 export function Showcases() {
   const pageContent = `
-    <h3>Tips</h3>
+    <h3 class='${styles.title_page}'>Tips</h3>
     <div class='${styles.bganimation}' id='bganimation'>
       <div class='${styles.backgroundanimation}' id='backgroundAnimation'></div>
     </div>  
@@ -27,7 +27,7 @@ export function Showcases() {
         </div>
         <div class='${styles.flex_button}'>  
           <button class='${styles.button_play}'>Empezar reto</button>
-          <button id="my-btn"><img src='${bulb}' class='${styles.image_bulb}'>Tips para este reto!</button>
+          <button id="my-btn" class='${styles.button_tip}'><img src='${bulb}' class='${styles.image_bulb}'>Tips para este reto!</button>
         </div>
       </div>
     </div> 
@@ -58,9 +58,9 @@ export function Showcases() {
     const bganimation = document.getElementById('bganimation')
     const numberofColorBoxes = 400;
     
-    for (let i = 0; i < numberofColorBoxes; i++){
+    for (let i = 0; i < numberofColorBoxes; i++) {
       const colorBox = document.createElement('DIV');
-      colorBox.classList.add('colorBox');
+      colorBox.classList.add(styles['colorBox']);
       bganimation.append(colorBox)
     }
   }

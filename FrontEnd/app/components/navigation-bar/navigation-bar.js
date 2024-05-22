@@ -21,7 +21,6 @@ export function NavigationBar(
     <div>  
       <h1 class='${styles.title}'>OLP<h1>
     </div> 
-    
     <div class='${styles.menu_right} >
       <img src=''>
       <img src='${luz}' class='${styles.image}'>

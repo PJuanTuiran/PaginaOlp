@@ -89,7 +89,8 @@ p > .ex_total{
     border-radius: 10px;
 }
 .sub_menu_wrap.open{
-    height: 320px;
+    height: 260px;
+    z-index: 1000;
 }
 
 .sub_menu{
