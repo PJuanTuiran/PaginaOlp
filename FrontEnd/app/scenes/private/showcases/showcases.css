@@ -61,21 +61,56 @@ img{
 }
 
 .button_play{
-    padding: 10px;
+    overflow: hidden;
+    position: relative;
+    color: var(--white-color);
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 2px solid var(--info-color);
+    box-shadow: var(--secondary-color), var(--info-color);
+    transition: transform 0.3s ease;
+    box-shadow: 0.3s ease;
+    width: 80%;
+    height: 50px;
+    background-color: var(--info-color);
+    font-size: 20px;
+    /* padding: 10px;
     width: 80%;
     height: 30%;
     background-color: transparent;
     color: var(--white-color);
     font-size: 30px ;
+    border: 1px solid var(--info-color); */
+}
+.button_play::after{
+    content: '';
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: -50px;
+    left: -100pc;
+    background-color:var(--secondary-color) ;
+    background-image: linear-gradient(225deg, var(--info-color), var(--secondary-color));
+    z-index: -100px;
+    transition: var(---transition);
+}
+.button_play:hover{
+    transform: translate(0, -6px);
+    box-shadow: 10px -10px 25px 0 var(--secondary-color),
+   -10px 10px 25px 0  rgb(8, 10, 100);
+}
+.button_play:hover::after{
+    transform: rotate(150deg);
 }
 .button_tip{
     width: 10%;
     background-color: transparent;
     color: white;
-    border: none;
-    font-weight: 900;
-    font-family: 20px;
-   
+    cursor: pointer;
+    border: 1px solid var(--info-color);
+}
+.button_tip:hover{
+    background-color: transparent;
 }
 .image{
     width: 100%;
@@ -108,6 +143,8 @@ button:hover{
     display: flex;
     align-items: center;
     pointer-events: all;
+    flex-basis: 50%;
+    height: 80%;
 }
 .title{
     font-size: var(--font-size-lg);
@@ -119,6 +156,7 @@ button:hover{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    flex-basis: 50%;
 }
 .flex_goals_challenge{
     display: flex;
@@ -142,15 +180,15 @@ hr{
 }
 .bganimation{
     position: absolute;
-    top:13%;
+    top:12%;
     left: 0%;
+    bottom: 0%;
     width: 100%;
-    margin: 0 auto;
-    height: 100vh;
+    height: 109vh;
     display: grid;
     grid-template-columns: repeat(20,1fr);
     grid-template-rows: repeat(20,1fr);
-    background: var(--dark-color);
+    background: var(--black-color);
     filter:saturate(2);
     overflow: hidden;
     
@@ -160,7 +198,7 @@ hr{
     transition: 2s ease;
     position: relative;
     margin: 2px;
-    background: var(--dark-color);
+    background: rgb(22, 22, 22)
     
    
 }

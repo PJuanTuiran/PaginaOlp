@@ -2,8 +2,11 @@ import styles from './showcases.css'
 import panel from '../../../assets/iconos-menu/panel.jpeg'
 import htmlChallenge from '../../../assets/iconos-menu/htmlChallenge.jpeg'
 import bulb from '../../../assets/iconos-menu/bulb.png'
+import newChallenge from '../../../assets/iconos-menu/newchallenge.png'
+import off from '../../../assets/iconos-menu/off.png'
+import on from '../../../assets/iconos-menu/on.png'
 
-export function Showcases() {
+export function Challenge() {
   const pageContent = `
     <h3 class='${styles.title_page}'>Tips</h3>
     <div class='${styles.bganimation}' id='bganimation'>
@@ -11,11 +14,9 @@ export function Showcases() {
     </div>  
       
     <div class='${styles.container_challenge}'>
-      <div class='${styles.container_image}'>
-        <img class='${styles.image}' src='${htmlChallenge}'>
-      </div>
+     
       <div class='${styles.flex_text}'>
-        <h2 class='${styles.title}'>Completa el siguiente reto</h2>
+        <h2 class='${styles.title}'>Preparate para el siguiente reto</h2>
         <hr>
         <div class='${styles.flex_goals_challenge}'>
           <h3>Fundamentos:</h3>
@@ -27,7 +28,7 @@ export function Showcases() {
         </div>
         <div class='${styles.flex_button}'>  
           <button class='${styles.button_play}'>Empezar reto</button>
-          <button id="my-btn" class='${styles.button_tip}'><img src='${bulb}' class='${styles.image_bulb}'>Tips para este reto!</button>
+          <button title='Tips para este reto!' id="my-btn" class='${styles.button_tip}'><img id='changeBulb' src='${off}' class='${styles.image_bulb}'></button>
         </div>
       </div>
     </div> 
@@ -35,13 +36,16 @@ export function Showcases() {
     <div class='${styles.modal}' id='modal'>
       <div class='${styles.modal_container}'>
           <img src ='${panel}' class='${styles.modal_image}'>
-          <h2 class='${styles.modal_title}'>Consejos para el desafio de programcion</h2>
+          <h2 class='${styles.modal_title}'>Consejos para el desafio de programacion</h2>
           <p class='${styles.modal_paragraph}'>1.Asegúrate de comprender la estructura básica de un documento HTML, que incluye las etiquetas html</p>
           <p>2. Aprende a crear formularios usando etiquetas como</p>
           <a href='#' class='${styles.modal_close}' id='close_modal'>Cerrar</a>
       </div>
     </div> 
   `;
+
+
+
 
   const logic = () => {
     const myBtn = document.getElementById('my-btn');
@@ -54,6 +58,14 @@ export function Showcases() {
     modalClose.addEventListener('click', () => {
       modal.classList.remove(`${styles['show']}`)
     })
+    const bulb = document.getElementById('changeBulb')
+    myBtn.addEventListener('mouseover', () => {
+      bulb.src= on
+    })
+    myBtn.addEventListener('mouseout', () => {
+      bulb.src= off
+    })
+    
 
     const bganimation = document.getElementById('bganimation')
     const numberofColorBoxes = 400;

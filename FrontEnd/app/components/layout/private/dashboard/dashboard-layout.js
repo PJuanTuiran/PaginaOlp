@@ -18,12 +18,12 @@ export function DashboardLayout(pageContent, logic, footer, navbarData, sidebarD
   sidebarData = [
     { href: '/dashboard', name: 'Home', imagen:home},
     // { href: '/dashboard/reports', name: 'Perfil',imagen: hacker},
-    { href: '/dashboard/settings', name: 'Lenguajes',imagen: rutas },
-    { href: '/dashboard/users', name: 'Retos',imagen: juegos },
+    { href: '/dashboard/settings', name: 'Lenguajes', imagen: rutas },
+     { href: '/dashboard/challenge', name: 'Retos',imagen: juegos },
+    // { href: '/dashboard/users', name: 'Retos',imagen: juegos },
     { href: '/dashboard/products', name: 'Estadisticas',imagen:gamificacion },
     { href: '/dashboard/forum', name: 'Tienda',imagen: tienda },
-    { href: '/dashboard/show-cases', name: 'Tips',imagen: tip },
-  ];
+   ];
 
   navbarData = {
     user: 'Nicolas Picon',
