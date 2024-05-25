@@ -19,7 +19,7 @@ export function NavigationBar(
       <img id="menu-hamburger" src='${menuHamburguesa}' class='${styles.menu_hamburguer}'>
     </div>
     <div>  
-      <h1 class='${styles.title}'>OLP<h1>
+      <h1 class='${styles.title}'>CodeStar<h1>
     </div> 
     <div class='${styles.menu_right} >
       <img src=''>
@@ -29,6 +29,7 @@ export function NavigationBar(
       <img src='${codigo}' class='${styles.image}'>
       <p class='${styles.ex_total}'}>0</p>
     </div>
+  </div>
     <div class='${styles.sub_menu_wrap}' id='subMenu'>
       <div class='${styles.sub_menu}'>
         <div class='${styles.user_info}'>
@@ -57,8 +58,8 @@ export function NavigationBar(
     <div class='${styles.container_search}' id='containerSearch'>
         <input type='search' class='${styles.input}'>
         <botton class='${styles.btn}'>Buscar</botton>
-      </div>   
-  </div>
+    </div>   
+  
   `;
 }
 

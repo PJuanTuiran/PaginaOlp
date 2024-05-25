@@ -1,7 +1,6 @@
 .container {
     display: flex;
     justify-content: space-between;
-    align-items:flex-start;
     padding: var(--spacing-2);
     background-color: #f0f0f0;
     height: 100%;
@@ -16,9 +15,8 @@
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 .menu_flex{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  width: 35px;
+  height: 35px;
 }
 .menu_right{
     display: flex;
@@ -45,8 +43,8 @@
     cursor: pointer;
 }
 .menu_hamburguer{
-    width: 12%;
-    height: 20%;
+    width: 100%;
+    height: 100%;
     cursor: pointer;
 }
 

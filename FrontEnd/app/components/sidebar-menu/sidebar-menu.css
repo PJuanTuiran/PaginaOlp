@@ -73,11 +73,10 @@ img{
     width: 300px;
     background-color: green;
 }
-.language{
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    gap: 5px;
+#lenguage{
+   background-color: aliceblue;
+   display: flex;
+   transition: all 5ms;
     
 }
 .list_item{
@@ -92,28 +91,25 @@ img{
     display: block;
     width: 100%;
     border-radius: 10px;
+    font-size: var(--font-size-xs);
 }
 .btn:hover{
-    background-color: var(--info-color);
+    font-weight: bold;
     color: white;
+    transition: all 5ms;
 }
 .list_inside{
     display: flex;
     align-items: center;
-    margin-left: 65px;
+    margin-left: 0px;
     list-style: none;
 }
 .list_show{
-    width: 100%;
-    margin-left: auto;
-    transition: height 4ms;
-    height: 120px;
-    overflow: hidden;
+   display: none;
 }
 
-.list_show.open{
-    height: 250px;
-    background-color: antiquewhite;
+.list_item_open{
+   display: block;
 }
 
 .image_list{

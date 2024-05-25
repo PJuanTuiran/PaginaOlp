@@ -1,0 +1,17 @@
+.footer_container{
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-4);
+}
+.footer_list{
+    list-style: none;
+    display: flex;
+    gap: var(--spacing-5);
+}
+
+.footer_list > li > a{
+    color: var(--black-color);
+}
+.footer_list > li > a:hover{
+    color: var(--info-color);
+}

@@ -46,28 +46,29 @@ export function SidebarMenu(data = []) {
       <ul>
         ${data.map((item) => `
           <li id="${item.href}" class="${item.active ? styles.active : ''}">
-            <img  class= '${styles.image}' src='${item.imagen}'> 
-            <button type="button">${item.name}</button>
-          </li>
-           
-          <li ${item.name === 'Lenguajes' ? ` class=${styles.list_item}'${styles.list_item_open}' id='lenguage'> 
-            <ul class='${styles.list_show} id='list_show'>
+            <img  class= '${styles.image}' src='${item.imagen}'>
+             ${item.name === 'Lenguajes' ? 
+          `<button type='button' class='${styles.lenguage}' id='lenguage'>${item.name}</button>
+            <ul class='${styles.list_show}' id='list_show'>
               <li class='${styles.list_inside}'>
-              <img src='${html}' class='${styles.image_list}'>
-              <button type='button'class='${styles.btn}'>HTML</button></li>
+                <img src='${html}' class='${styles.image_list}'>
+                <button type='button'class='${styles.btn}'>HTML</button></li>
               <li class='${styles.list_inside}'>
                <img src='${css}' class='${styles.image_list}'>
-              <button type='button' class='${styles.btn}'>CSS</button></li>
+                <button type='button' class='${styles.btn}'>CSS</button></li>
               <li class='${styles.list_inside}'>
-               <img src='${js}' class='${styles.image_list}'>
-              <button type='button' class='${styles.btn}'>Javascript</button></li>
-            </ul>
-          </li>  
-            ` : ''}
+                <img src='${js}' class='${styles.image_list}'>
+                <button type='button' class='${styles.btn}'>JS</button></li>
+            </ul>`
+            :`<button type="button">${item.name}</button>`
+          }
+          </li>
+           
         `).join('')}
         <li><button id="logout" type="button">Logout</button></li>
       </ul>
     </aside>
   `;
 }
+
 
