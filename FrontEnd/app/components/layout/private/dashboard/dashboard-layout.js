@@ -9,6 +9,7 @@ import stylesnav from '../../../navigation-bar/navigation-bar.css';
 import stylesside from '../../../sidebar-menu/sidebar-menu.css';
 import { FooterScene } from "../../../footer/footer";
 
+
 export function DashboardLayout(pageContent, logic, footer, navbarData, sidebarData) {
 
   // hace la peticion al backend.
@@ -21,7 +22,7 @@ export function DashboardLayout(pageContent, logic, footer, navbarData, sidebarD
     { href: '/dashboard/settings', name: 'Lenguajes', imagen: rutas },
      { href: '/dashboard/challenge', name: 'Retos',imagen: juegos },
     // { href: '/dashboard/users', name: 'Retos',imagen: juegos },
-    { href: '/dashboard/products', name: 'Estadisticas',imagen:gamificacion },
+    { href: '/dashboard/stadistics', name: 'Estadisticas',imagen: gamificacion },
     { href: '/dashboard/forum', name: 'Tienda',imagen: tienda },
    ];
 

@@ -42,3 +42,24 @@
 .open_menu{
     width: 100px;
 }
+
+@media (min-width: 367px) and (max-width: 767px){
+
+
+    .container {
+    display: grid;
+    grid-template-areas: "sidebar navbar"
+                        "sidebar main"
+                        "sidebar footer";
+     grid-template-columns: minmax(0px, 0px) 1fr;
+}
+.sidebar{
+    display: none;
+}
+.sidebar.active{
+    display: block;
+    width: 200px;
+    background-color: rgb(0, 0, 0);
+}
+
+}

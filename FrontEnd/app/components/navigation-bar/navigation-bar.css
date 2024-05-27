@@ -161,3 +161,38 @@ p > .ex_total{
     border-radius: 10px;
     color: white;
 }
+
+@media (min-width: 367px) and (max-width: 767px){
+    .title{
+    display: none;
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding: var(--spacing-2);
+    background-color: var(--white-color);
+    height: 100%;
+    gap: var(--spacing-2);
+    color: rgb(7, 7, 7);
+    width: 100%;
+}
+.sub_menu_wrap{
+    position: absolute;
+    top: 10%;
+    right: 0%;
+    width: 200px;
+    height: 0px;
+    color: black;
+    background-color: #f0f0f0;
+    overflow: hidden;
+    transition: 0,5s;
+    border-radius: 10px;
+}
+.sub_menu_wrap.open{
+    height: 260px;
+    z-index: 1000;
+    width: 200px;
+
+}
+
+}
